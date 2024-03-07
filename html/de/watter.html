@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./../../css/style.css" />
+    <script src="./../../src/main.js"></script>
+    <title>Das Wetter für heute.</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+
+      .bg-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+      }
+
+      .video-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.8)
+        );
+        z-index: 50;
+      }
+
+      #content {
+        position: relative;
+        z-index: 100; /* Содержимое над видео и градиентом */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        color: #f1f1f1;
+        flex-direction: column;
+        padding: 20px;
+      }
+      #inputContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .footer {
+        background-color: rgb(51, 51, 51, 0.5);
+        position: relative; /* Изменено с 'static' на 'relative' для корректного отображения z-index */
+        z-index: 1000; /* Уже задано, но подтверждаем, что это достаточно для видимости поверх видео */
+        color: rgb(
+          255,
+          255,
+          255
+        ); /* Убедимся, что текст отображается над фоном */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar" style="background-color: rgb(51, 51, 51, 0.3)">
+      <div class="navbar-links">
+        <a href="./../../index.html">Haus</a>
+        <a href="./codebsp.html">Code</a>
+        <a href="./euro.html">Währungskurs</a>
+      </div>
+    </div>
+    <div id="content">
+      <h1 style="float: right">Bitte geben Sie die Stadt ein:</h1>
+      <div id="inputContainer">
+        <input
+          id="cityInput"
+          type="text"
+          style="
+            background-color: #2b82ad;
+            border: 5px solid #00405d;
+            width: 400px;
+            height: 40px;
+            border-radius: 3px;
+          "
+        />
+        <button
+          onclick="getWeather()"
+          style="
+            width: 100px;
+            height: 50px;
+            font-size: 30px;
+            background-color: #004b79;
+            border: 0px;
+            border-radius: 10px;
+            cursor: pointer;
+          "
+        >
+          go
+        </button>
+      </div>
+    </div>
+    <footer class="footer">
+      <h5>
+        Diese Website ist ein Projekt für diese
+        <a href="https://cusanus-gymnasium.eu/">Schule</a>.
+      </h5>
+      <a href="./../../index.html" style="color: #fff">Haus</a>
+      <a href="https://github.com/MelonCodeUK">
+        <img
+          src="./../../assets/github-mark-white.png"
+          alt="github-mark-white"
+          style="height: 30px; width: 30px"
+        />
+      </a>
+    </footer>
+
+    <div class="video-overlay"></div>
+
+    <video autoplay muted loop class="bg-video">
+      <source src="./../../assets/video.mp4" type="video/mp4" />
+      Ваш браузер не поддерживает тег video.
+    </video>
+
+    <script></script>
+  </body>
+</html>

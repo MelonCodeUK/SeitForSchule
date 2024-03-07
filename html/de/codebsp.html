@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <link rel="stylesheet" href="./../../css/animations.css" />
+    <link rel="stylesheet" href="./../../css/style.css" />
+    <link rel="stylesheet" href="./../../css/a11y-dark.css" />
+    <script src="./../../src/highlight.min.js"></script>
+    <script src="./../../src/main.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <style>
+      /* Стили для тела страницы */
+      body {
+        margin: 0%;
+        background-color: #1c1d21; /* Цвет фона */
+      }
+      #content {
+        display: flex; /* Используем flex-контейнер для выравнивания по центру */
+        justify-content: center; /* Выравнивание по горизонтали по центру */
+        align-items: center; /* Выравнивание по вертикали по центру */
+        flex-direction: column;
+      }
+
+      /* Стили для блока code */
+      code {
+        border-radius: 10px; /* Скругление углов */
+        border: 1px rgb(104, 104, 104) solid; /* Граничная линия с цветом */
+        border-top-right-radius: 0%; /* Скругление угла вверху справа */
+        max-width: 100%; /* Максимальная ширина блока */
+        margin: 0%; /* Убираем отступы по умолчанию */
+        font-size: 200%;
+      }
+
+      /* Стили для заголовка h3 */
+      h3 {
+        color: rgb(62, 99, 87); /* Цвет текста */
+        font-size: 200%;
+      }
+
+      /* Стили для таблицы */
+
+      p {
+        color: #7b868a; /* Цвет текста */
+        font-size: 200%;
+      }
+      .spracheConteiner {
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+      }
+
+      .spracheConteinerCodeUndTitle {
+        display: flex;
+      }
+      .spracheConteinerDescription {
+        justify-self: center;
+        align-self: center;
+      }
+      .buttonHref {
+        height: 50px;
+        width: 100px;
+      }
+    </style>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informationen zu Programmiersprachen</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-links">
+        <a href="./../../index.html">Haus</a>
+        <a href="#python">Python</a>
+        <a href="#cpp">C++</a>
+        <a href="#rust">Rust</a>
+        <a href="#nim">Nim-lang</a>
+      </div>
+    </div>
+    <div id="content">
+      <!-- python -->
+      <div class="spracheConteiner" style="margin-top: 60px">
+        <div class="spracheConteinerCodeUndTitle">
+          <div class="titles">
+            <h3 class="fade_in_text_right">
+              Dies ist ein einfaches Beispiel für "Hello world!" in Python:
+            </h3>
+            <pre class="fade_in_text_left"><code>
+print("hello world!")
+          </code></pre>
+            <p class="fade_in_text_right">oder:</p>
+            <pre class="fade_in_text_up"><code>
+def main():
+  print("Hello World!")
+if __name__ == "__main__":
+   main()
+          </code></pre>
+          </div>
+        </div>
+        <div class="spracheConteinerDescription">
+          <p class="fade_in_text_down">
+            <span
+              ><span
+                id="python"
+                style="color: rgb(93, 151, 228); font-size: 40px"
+                >Python</span
+              >
+              ist eine
+              <span style="color: rgb(236, 63, 63)">Programmiersprache</span>,
+              die für ihre Einfachheit bekannt ist. und lesbaren Code bekannt
+              ist. Sie wird für die Entwicklung einer Vielzahl von Anwendungen,
+              Websites, wissenschaftliche Forschung, Aufgabenautomatisierung und
+              und künstliche Intelligenz.</span
+            >
+          </p>
+          <button
+            class="fade_in_text_left buttonHref"
+            style="float: left; margin-right: 10px"
+            onclick="buttonHref('https://onlinegdb.com/fDhuG8h38')"
+          >
+            Run>>
+          </button>
+        </div>
+      </div>
+      <!-- c++ -->
+      <div class="spracheConteiner">
+        <div class="spracheConteinerDescription">
+          <p style="text-align: right" class="fade_in_text_right">
+            <span id="cpp" style="color: rgb(93, 151, 228); font-size: 40px"
+              >C++</span
+            >
+            ist eine
+            <span style="color: rgb(236, 63, 63)">Programmiersprache</span>, die
+            zur Erstellung verschiedener Arten von Software verwendet wird, von
+            Spielen über mobile Anwendungen bis hin zu Systemsoftware.
+          </p>
+          <button
+            class="fade_in_text_left buttonHref"
+            style="float: right; margin-right: 10px"
+            onclick="buttonHref('https://onlinegdb.com/WFeO3uWJSP')"
+          >
+            Run>>
+          </button>
+        </div>
+        <div class="spracheConteinerCodeUndTitle">
+          <div class="titles">
+            <h3 class="fade_in_text_right">
+              Dies ist ein einfaches Beispiel für "Hello world!" in C++:
+            </h3>
+            <pre
+              class="fade_in_text_left"
+            ><code style="border-top-left-radius: 0%; border-top-right-radius: 10px">
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout << "Hello world!" << std::endl;
+    return 0;
+}
+          </code></pre>
+          </div>
+        </div>
+      </div>
+      <!-- rust -->
+      <div class="spracheConteiner">
+        <div class="spracheConteinerCodeUndTitle">
+          <div class="titles">
+            <h3 class="fade_in_text_right">
+              Dies ist ein einfaches Beispiel für "Hello world!" in Rust:
+            </h3>
+            <pre class="fade_in_text_left"><code>
+fn main() { 
+    println!("Hello world!");
+}
+          </code></pre>
+            <button
+              class="fade_in_text_left buttonHref"
+              style="float: right"
+              onclick="buttonHref('https://onlinegdb.com/0xF4sWYIb')"
+            >
+              Run>>
+            </button>
+          </div>
+        </div>
+        <div class="spracheConteinerDescription">
+          <p class="fade_in_text_left" style="width: 120%; font-size: 170%">
+            <span id="rust" style="color: rgb(93, 151, 228); font-size: 40px"
+              >Rust</span
+            >
+            ist eine junge
+            <span style="color: rgb(236, 63, 63)">Programmiersprache</span>, die
+            2010 von Mozilla eingeführt wurde und deren Schwerpunkt auf
+            Sicherheit und Leistung liegt. Die Syntax ist ähnlich wie bei C++,
+            aber mit einer ähnlichen Philosophie wie bei Haskell und ML. Rust
+            wird für neue Projekte immer beliebter, insbesondere in Bereichen,
+            in denen Sicherheit und Leistung entscheidend sind. Es wird bei der
+            Entwicklung von Betriebssystemen, Webservern und Compilern
+            eingesetzt. Trotz seiner Leistungsfähigkeit kann Rust aufgrund
+            seines strengen Typensystems für Anfänger eine Herausforderung
+            darstellen, aber dank der Dokumentation und einer aktiven
+            Gemeinschaft entwickelt es sich zu einem soliden Werkzeug für die
+            Systemprogrammierung.
+          </p>
+        </div>
+      </div>
+      <!-- Nim-lang -->
+      <div class="spracheConteiner">
+        <div class="spracheConteinerDescription">
+          <p tyle="text-align: left" class="fade_in_text_right">
+            <span id="nim" style="color: rgb(93, 151, 228); font-size: 40px"
+              >Nim</span
+            >
+            ist eine
+            <span style="color: rgb(236, 63, 63)">Programmiersprache</span>,
+            deren Syntax der von Python ähnelt, was sie lesbarer und leichter zu
+            erlernen macht. Im Gegensatz zu Python ist Nim jedoch kompiliert,
+            was bedeutet, dass Nim-Programme schnell und effizient laufen. Mit
+            dieser Sprache lassen sich schnelle und sichere Anwendungen
+            erstellen, einschließlich Webentwicklung und Systemprogrammierung.
+          </p>
+        </div>
+        <div class="spracheConteinerCodeUndTitle">
+          <div class="titles">
+            <h3 class="fade_in_text_right">
+              Dies ist ein einfaches Beispiel für "Hello world!" in Nim-lang:
+            </h3>
+            <pre
+              class="fade_in_text_left"
+            ><code style="border-top-left-radius: 0%; border-top-right-radius: 10px">
+echo "Hello, world!"
+          </code></pre>
+            <button
+              class="fade_in_text_left buttonHref"
+              style="float: right; margin-right: 10px"
+              onclick="buttonHref('https://play.nim-lang.org/#pasty=pyKHBNXpTvEf')"
+            >
+              Run>>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <h5>
+        Diese Website ist ein Projekt für diese
+        <a href="https://cusanus-gymnasium.eu/">Schule</a>.
+      </h5>
+      <a href="./../../index.html" style="color: #fff">Haus</a>
+      <a href="https://github.com/MelonCodeUK">
+        <img
+          src="./../../assets/github-mark-white.png"
+          alt="github-mark-white"
+          style="height: 30px; width: 30px"
+        />
+      </a>
+    </footer>
+  </body>
+</html>
